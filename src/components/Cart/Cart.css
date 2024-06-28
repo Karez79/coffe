@@ -1,0 +1,46 @@
+.cart {
+    padding: 20px;
+  }
+  
+  .back-button {
+    margin-bottom: 20px;
+  }
+  
+  .total-amount {
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .proceed-payment-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ffcc00; /* Измените цвет по вашему вкусу */
+    border: none;
+    cursor: pointer;
+  }
+  
+  .cart-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .view-cart-button {
+    position: relative;
+    background-color: #ffcc00; /* Измените цвет по вашему вкусу */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .cart-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+  

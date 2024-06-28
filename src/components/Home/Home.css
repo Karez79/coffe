@@ -1,0 +1,48 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .monitor-container {
+    position: relative;
+    width: 60%;
+    transition: transform 1s ease;
+  }
+  
+  .monitor-img {
+    width: 100%;
+  }
+  
+  .monitor-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    width: 173px;
+    margin-bottom: 20px;
+    margin-top: -158px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
