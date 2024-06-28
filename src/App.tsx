@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/Home/Home';
 import DrinkSelection from './components/DrinkSelection/DrinkSelection';
 import PaymentSelection from './components/PaymentSelection/PaymentSelection';
@@ -11,6 +11,8 @@ import Cart from './components/Cart/Cart';
 // import './App.css';
 
 const App: React.FC = () => {
+  console.log('Rendering App component');
+
   const [cart, setCart] = useState<{ drink: string; price: number; quantity: number }[]>([]);
   const [selectedDrinkIndex, setSelectedDrinkIndex] = useState<number | null>(null);
 
@@ -50,7 +52,7 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="app">
-        <AnimatePresence mode="wait">
+        <AnimatePresence exitBeforeEnter>
           <Routes>
             <Route path="/" element={<Home onSelect={handleSelectMode} />} />
             <Route path="/drink-selection" element={<DrinkSelection onDrinkSelect={handleDrinkSelect} cart={cart} />} />

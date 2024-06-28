@@ -1,37 +1,48 @@
 /* jshint esversion: 6 */
-const path = require('path');
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const path = require('path');
 
 module.exports = {
-  entry: './src/index.tsx',
+  entry: path.resolve(__dirname, './src/index.tsx'),
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'), // Изменено на 'build'
+    filename: 'static/js/[name].[contenthash].js',
+    path: path.resolve(__dirname, 'build'),
     publicPath: './', // Установка относительных путей
   },
+  mode: 'production',
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js'],
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
+        test: /\.(js|jsx|tsx|ts)$/,
         exclude: /node_modules/,
+        use: ['babel-loader'],
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|webp|ico)$/i,
+        test: /\.(png|jpg|jpeg|svg|gif|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'static/media/[name].[hash][ext]',
+        },
+      },
+      {
+        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)$/i,
         use: [
           {
             loader: 'file-loader',
             options: {
               name: '[name].[hash].[ext]',
-              outputPath: 'assets/',
-              publicPath: './assets/',
+              outputPath: 'media/',
             },
           },
         ],
@@ -40,13 +51,18 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './public/index.html',
-      favicon: './public/favicon.ico',
+      template: path.resolve(__dirname, './public/index.html'),
+      favicon: path.resolve(__dirname, './public/favicon.ico'),
     }),
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'build'), // Изменено на 'build'
-    compress: true,
-    port: 9000,
+    historyApiFallback: true,
+    port: 3000,
+    open: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
   },
 };
