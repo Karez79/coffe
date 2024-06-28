@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+## Описание проекта
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+В качестве тестового задание кандидату предлагается создать мини-проект интерфейса кофейни самообслуживания.
 
-## Available Scripts
+## Используемые технологии
 
-In the project directory, you can run:
+- <img src="https://img.icons8.com/color/48/000000/typescript.png" alt="TypeScript" width="15"/> [TypeScript](https://www.typescriptlang.org/)
+- <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" width="15"/> [React](https://ru.reactjs.org/)
+- <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS" width="15"/>     [CSS](https://www.w3.org)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Выполнил:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Козлов Иван - Профиль на GitHub [https://github.com/Karez79](https://github.com/Karez79)
 
-### `npm test`
+## Инструкции по установке и запуску:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Клонируйте репозиторий: `git clone git@github.com:Karez79/coffe-shop.git`
+2. Перейдите в директорию проекта: `cd coffe-shop`
+3. Установите зависимости: `npm install`
+4. Запустите проект: `npm start`
+5. В браузере открываем `http://localhost:3000/`
 
-### `npm run build`
+### ЧТОбЫ ОТКРЫТЬ НА СВОЕМ КОМПЬЮТЕРЕ (подробный вариант)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Переходим по этой ссылке: `https://github.com/Karez79/coffe-shop.git`
+2. Нажимаем `Code`
+3. Нажимаем `Download ZIP`
+4. Распаковываем скачанный архив в любое удобное место
+5. Заходим в `Visual Studio Code`, в разделе `Файл` выбираем `Открыть папку`, выбираем распакованную папку, жмём `Ok`
+6. В разделе `Терминал` выбираем `Создать терминал`
+7. Пишем в терминале: `cd coffe-shop`
+8. Установка зависимости: `npm install`
+9. Запуск проект: `npm run start`
+10. В браузере открываем `http://localhost:3000/`
